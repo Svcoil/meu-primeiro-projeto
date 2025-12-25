@@ -1,0 +1,172 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* CORES PRINCIPAIS */
+:root {
+    --rosa: #e91e63;
+    --rosa-claro: #f8bbd0;
+    --cinza-escuro: #333;
+    --cinza-claro: #f5f5f5;
+}
+
+/* BODY */
+body {
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--rosa), #c2185b);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.nome-negocio {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* MENU */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--rosa);
+}
+
+/* SOBRE */
+.sobre p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* SERVIÇOS */
+.servicos  {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.servico-item {
+    background: rgb(248, 246, 246);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servico-item h3 {
+    color: var(--rosa);
+    margin-bottom: 10px;
+}
+
+.servico-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* CONTATO */
+.contato  {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contato  ul {
+    list-style: none;
+    text-align: center;
+}
+
+.contato  li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--cinza-escuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .nome-negocio {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+}
+/* BOTÃO FLUTUANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
